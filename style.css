@@ -1,0 +1,217 @@
+:root {
+    --clr-primary-paleBlue: hsl(225, 100%, 94%);
+    --clr-primary-brightBlue: hsl(245, 75%, 52%);
+
+    --clr-neutral-veryPaleBlue: hsl(225, 100%, 98%);
+    --clr-neutral-desturatedBlue: hsl(224, 23%, 55%);
+    --clr-neutral-darkBlue: hsl(223, 47%, 23%);
+
+    --font-family: 'Red Hat Display', sans-serif;
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+
+/* general styling */
+
+body {
+    background-color: var(--clr-primary-paleBlue);
+    background-image: url(pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+}
+
+.outside-container {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 375px;
+    margin: auto;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 1.5rem;
+}
+
+.plan {
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-darkBlue);
+    font-size: 0.825rem;
+    text-align: left;
+}
+
+.price {
+    font-weight: var(--fw-medium);
+    color: var(--clr-neutral-desturatedBlue);
+    font-size: 0.825rem;
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.order-summary h1 {
+    text-align: center;
+    color: var(--clr-neutral-darkBlue);
+    font-weight: var(--fw-black);
+    font-size: 1.5rem;
+}
+
+.order-summary p {
+    text-align: center;
+    color: var(--clr-neutral-desturatedBlue);
+    font-size: 0.825rem;
+}
+
+.payment-time {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    overflow: hidden;
+    background-color: var(--clr-neutral-veryPaleBlue);
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+
+.icon-plan {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.icon {
+    width: 38px;
+}
+
+.change {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: right;
+
+}
+
+.change a {
+    font-size: 0.75rem;
+    color: var(--clr-primary-brightBlue);
+    font-weight: var(--fw-bold);
+}
+
+.change a:hover {
+    color: var(--clr-neutral-desturatedBlue);
+    text-decoration: none;
+}
+
+.payment-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.payment-proceed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-proceed a:hover {
+    background-color: hsl(245, 87%, 64%);;
+}
+
+.payment-proceed a {
+    background-color: var(--clr-primary-brightBlue);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: 0.825rem;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    text-decoration: none;
+} 
+
+.payment-cancel {
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: 0.825rem;
+    color: var(--clr-neutral-desturatedBlue);
+}
+
+.payment-cancel a {
+    text-decoration: none;
+    color: var(--clr-neutral-desturatedBlue);
+}
+
+.payment-cancel a:hover {
+    color: var(--clr-neutral-darkBlue);
+}
